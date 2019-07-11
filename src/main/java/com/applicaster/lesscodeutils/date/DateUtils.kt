@@ -1,5 +1,14 @@
 package com.applicaster.lesscodeutils.date
 
-class DateUtils {
+import java.text.SimpleDateFormat
+import java.util.*
 
+class DateUtils {
+    companion object {
+        fun getCurrentDate(dateFormat: String): String {
+            val date = Date()
+            val simpleDateFormat = SimpleDateFormat(dateFormat, Locale.getDefault())
+            return simpleDateFormat.format(date)
+        }
+    }
 }
