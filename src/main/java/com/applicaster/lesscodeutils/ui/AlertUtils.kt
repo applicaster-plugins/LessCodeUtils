@@ -7,6 +7,11 @@ import com.applicaster.lesscodeutils.R
 
 class AlertUtils {
     companion object {
+        fun showAlertDialog(context: Context, title: String, message: String,
+                            positiveBtnText: String, listener: DialogInterface.OnClickListener) {
+            getAlertDialog(context, title, message, positiveBtnText, listener).show()
+        }
+
         fun getAlertDialog(context: Context, title: String, message: String,
                            positiveBtnText: String)
                 : AlertDialog {
