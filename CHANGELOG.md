@@ -5,3 +5,5 @@ All notable changes to this project will be documented in this file.
 ## 0.0.1
 - First version
 
+## 0.0.2
+- Added `showAlertDialog` method to avoid not calling `show()` when using `getAlertDialog`.
