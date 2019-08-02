@@ -19,3 +19,19 @@ It returns an `AlertDialog` with a default listener (that dismisses the dialog).
 
 ##### `getAlertDialog(context, title, message, positiveBtnText, listener) : AlertDialog`
 It returns an `AlertDialog` with a custom listener (defined by `listener`).
+
+## Adding module dependency to the project
+Add the dependency in the `build.gradle` file of your module:
+```
+implementation "com.applicaster:LessCodeUtils-Android:x.x.x"
+```
+
+If you start contributing and want to make tests locally in your app you will need to add the following snippet instead:
+```
+def lessCodeLib = findProject(':LessCodeUtils')
+if (lessCodeLib != null) {
+    implementation(project(":LessCodeUtils"))
+} else {
+    implementation "com.applicaster:LessCodeUtils-Android:x.x.x"
+}
+```
